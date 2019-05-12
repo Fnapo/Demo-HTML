@@ -1,5 +1,6 @@
 let incCrono = 0;
-let decimales = 1;
+let cifras = 1;
+let divisor = Math.pow(10, cifras);
 
 let mostrar = function() {
     let tiempo = new Date();
@@ -14,7 +15,10 @@ let mostrar = function() {
 };
 
 let arrancar = function() {
-    incCrono = (!incCrono ? Math.pow(10, -decimales) : 0);
+    incCrono = !incCrono;
+    $('#arrancar').html(incCrono ? 'Parar' : 'Arrancar');
+    $('#inicializar').prop('class', 'botones-' + (incCrono ? 'des' : 'act'));
+    $('#inicializar').prop('disabled', (incCrono ? 'disabled' : ''));
 };
 
 let inicializar = function() {
@@ -23,22 +27,14 @@ let inicializar = function() {
     }
 };
 
-let initVisitas = function() {
-    localStorage.visitas = (localStorage.visitas || 0);
-    mostrarVisitas();
-};
-
 let mostrarVisitas = function() {
+    localStorage.visitas = (localStorage.visitas || 0);
     localStorage.visitas++;
     $('#visitas').html(localStorage.visitas + " visitas.");
 };
 
-let initCrono = function() {
-    localStorage.crono = (localStorage.crono || 0);
-    mostrarCrono();
-};
-
 let mostrarCrono = function() {
-    localStorage.crono = parseFloat(parseFloat(localStorage.crono) + incCrono).toFixed(decimales);
-    $("#crono").html(localStorage.crono + " s.");
+    localStorage.crono = (localStorage.crono || 0);
+    localStorage.crono = +localStorage.crono + incCrono; // El signo + convierte a number.
+    $("#crono").html((localStorage.crono / divisor).toFixed(cifras) + " s.");
 };

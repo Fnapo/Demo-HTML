@@ -25,9 +25,9 @@
                 });
                 setInterval(mostrar, 1000);
                 mostrar();
-                setInterval(initCrono, 100);
-                initCrono();
-                initVisitas();
+                setInterval(mostrarCrono, 1000 / divisor);
+                mostrarCrono();
+                mostrarVisitas();
                 localStorage.clear();
             });
         </script>
@@ -54,11 +54,11 @@
         </div>
         <br />
         <div class="contenedor-botones">
-            <button type="button" id="arrancar" class="botones" onclick="arrancar()">
-                Parar/Arrancar
+            <button type="button" id="arrancar" class="botones-act" onclick="arrancar()">
+                Arrancar
             </button>
             <span> - </span>
-            <button type="button" id="inicializar" class="botones" onclick="inicializar()">
+            <button type="button" id="inicializar" class="botones-act" onclick="inicializar()">
                 Inicializar
             </button>
         </div>

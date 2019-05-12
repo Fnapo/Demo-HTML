@@ -11,12 +11,13 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: brown;
+    background-color: maroon;
     color: whitesmoke;
     width: 600px;
     font-weight: bolder;
     font-size: 30px;
     padding: 5px;
+    border: 5px solid darkgoldenrod;
 }
 
 .contenedor-tiempo {
@@ -24,7 +25,7 @@ h1 {
     font-size: 50px;
     padding: 10px;
     text-align: center;
-    background-color: brown;
+    background-color: darkviolet;
     margin-left: auto;
     margin-right: auto;
     width: 600px;
@@ -36,15 +37,25 @@ h1 {
     font-size: 2em;
 }
 
-.botones {
+button {
+    width: 8em;
+}
+
+.botones-act {
     background-color: darkgreen;
     color: wheat;
     font-size: 1em;
 }
 
-.botones:hover {
+.botones-act:hover {
     background-color: chartreuse;
     color: darkslategrey;
+}
+
+.botones-des {
+    background-color: olivedrab;
+    color: wheat;
+    font-size: 1em;
 }
 
 .ver-tiempo {
