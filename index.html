@@ -28,7 +28,7 @@
                 setInterval(mostrarCrono, 1000 / divisor);
                 mostrarCrono();
                 mostrarVisitas();
-                localStorage.clear();
+                crearLineas();
             });
         </script>
     </head>
@@ -78,6 +78,10 @@
         <div class="contenedor" id="contenedor-svg1">
             <svg id="reloj-svg1" viewBox="0 0 100 100">
                 <circle id="mi-circulo" cx="50" cy="50" r="48" fill="orange" stroke="black" stroke-width="2" />
+                <line id='v-hora' x1='50' y1='50' x2='50' y2='18' />
+                <line id='v-min' x1='50' y1='50' x2='50' y2='12' />
+                <line id='v-seg' x1='50' y1='50' x2='50' y2='6' />
+                <circle id='punto' cx="50" cy="50" r="2" fill="black" />
             </svg>
         </div>
     </body>

@@ -67,3 +67,18 @@ button {
     width: 50%;
     height: 50%;
 }
+
+#v-hora {
+    stroke: black;
+    stroke-width: 2;
+}
+
+#v-min {
+    stroke: darkslategrey;
+    stroke-width: 1.5;
+}
+
+#v-seg {
+    stroke: red;
+    stroke-width: 1;
+}
